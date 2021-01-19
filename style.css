@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    background: hsl(270, 20%, 96%);
+}
+.flex::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    width: 30%;
+    height: 90%;
+    background: linear-gradient(to bottom,  hsl(293, 100%, 63%) 0%,hsl(271, 15%, 43%) 20%, hsl(271, 15%, 43%) 100%);
+    overflow: hidden;
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+}
+.flex {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.phone-grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+.phone-grid .phone {
+    height: 70%;
+    width: 43%;
+    border: 10px solid white;
+    border-radius: 15px;
+    float: right;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    overflow: visible;
+    z-index: 100;
+    background: white;
+}
+;
+.letters {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem !important; 
+}
+
+p {
+    color: hsl(270, 7%, 64%);
+    font-size: 16px;
+    line-height: 30px;
+}
+
+h3 {
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.chat-header {
+    background: linear-gradient(90deg, hsl(293, 100%, 63%) 50%, hsl(271, 15%, 43%) 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    text-align: left;
+    color: white;
+}
+
+.chat-header p {
+    font-size: 10px;
+    color: white;
+}
+
+.chat-header img {
+    height: 30px;
+    width: 30px;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.message-left {
+    width: 60%;
+    color: hsl(276, 55%, 52%);
+    background: rgb(214, 208, 208);
+    margin-bottom: 0.8rem;
+    border-radius: 20px;
+    border-bottom-left-radius: 10px;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 11px;
+    text-justify: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    float: left;
+}
+
+.message-rigth {
+    color: hsl(271, 15%, 43%);
+    width: 60%;
+    margin-bottom: 0.8rem;
+    border-radius: 20px;
+    border-bottom-right-radius: 10px;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 11px;
+    text-justify: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    float: right;
+}
+
+.message-pay {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    float: left;
+    margin-bottom: 0.8rem;
+    border-radius: 20px;
+    border-bottom-left-radius: 10px;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 11px;
+    color: white;
+    background: linear-gradient(90deg, hsl(271, 15%, 43%), hsl(293, 100%, 63%) 50% 100%);
+}
+#chat-input{
+    border: none;
+    width: 100%;
+    height: 1.2rem;
+    outline: none;
+}
+input[type='radio']{
+    outline: hsl(289, 100%, 72%);
+}
+
+@media (max-width: 320px){
+    .flex{
+        display: block;
+        width: 100%;
+    }
+    .flex::before{
+        width: 50%;
+        border: none;
+        border-bottom-left-radius: 0px;
+    }
+    .phone-grid{
+        padding: 0;
+    }
+    .phone-grid .phone{
+        width: 70%;
+        height: 82%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1rem;
+    }
+    .letters{
+        text-align: center;
+        padding: 1rem;
+    }
+}
